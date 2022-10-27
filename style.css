@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital@1&display=swap');
+
+html body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    background: #000;
+    position: static;
+}
+.wrap {
+   margin-top: 5em;
+   border: 1px solid #f441a5;
+   border-radius: 10px;
+}
+h3{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+.text{ 
+    margin: 5em;
+    color: antiquewhite;
+    font-family: Courier Prime;
+    inline-size: 22.5em;
+}
+.text .verse{
+    margin-top: 5rem;
+    font-size: smaller;
+    width: 70%;
+    color: azure;
+    inline-size: 21em;
+}
+/**form*/
+.form{
+    position: relative;
+    max-width: 60%;
+    height: 10vh;
+    margin-top: 5em;
+    background-color: grey;
+    padding: 1.5em;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+/*footer*/
+
+.footer{
+        position: fixed;
+        bottom: 0;
+        background: grey;
+        opacity: 50%;
+    }
+/*button*/
+.buttons{
+border-radius: 20px;
+border: 1px solid black;
+padding: 1em;
+}
+.buttons button{
+    position: relative;
+    height: 60px;
+    width: 150px;
+    margin: 0 20px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background: #111;
+    color:  #fff;
+    font-size: 1em;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+.buttons button:first-child:hover{
+    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background-size: 300%;
+}
+.buttons button:last-child:hover{
+    background: linear-gradient(90deg,#2192FF,#38E54D,#9CFF2E,#2192FF);
+    background-size: 350%;
+}
+.buttons button:first-child:before,
+.buttons button:last-child:before{
+    content: '';
+    position: absolute;
+    background: inherit;
+    top: -5px; 
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    border-radius: 30px;
+    filter: blur(10px);
+    opacity: 0;
+    transition:opacity 0.5s ;
+}
+.buttons button:first-child:hover:before,
+.buttons button:last-child:hover:before{
+    opacity: 1;
+    z-index: -1;
+}
+.buttons button:hover{
+    z-index: 1;
+    animation: glow 8s linear infinite;
+}
+@keyframes glow{
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 450%;
+    }
+}
+@media only screen and (max-width:750px) { /*min is for above the specifi pixel the content will applied*/
+                                            /*max is for beyond the specifc pixel the content will applied*/
+   
+  }
